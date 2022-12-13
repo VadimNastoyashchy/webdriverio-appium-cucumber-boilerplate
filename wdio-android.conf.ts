@@ -1,7 +1,6 @@
 import {join} from "path";
 
 exports.config = {
-
     autoCompileOpts: {
         autoCompile: true,
         tsNodeOpts: {
@@ -9,35 +8,11 @@ exports.config = {
             project: "tsconfig.json"
         }
     },
-    //
-    // ====================
-    // Runner Configuration
-    // ====================
-    //
     port: 4723,
     specs: ["./features/**/*.feature"],
-    // Patterns to exclude.
     exclude: [],
-    //
-    // ============
-    // Capabilities
-    // ============
-    //
     maxInstances: 2,
     capabilities: [
-        // {
-        //     platformName: "Android",
-        //     maxInstances: 1,
-        //     specs: ["./test/specs/android/logIn_problem.ts"],
-        //     "appium:avd": "Pixel_3_API_29",
-        //     "appium:deviceName": "Pixel_3_10.0",
-        //     "appium:platformVersion": "10.0",
-        //     "appium:orientation": "PORTRAIT",
-        //     "appium:automationName": "UiAutomator2",
-        //     "appium:app": join(process.cwd(), "./app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"),
-        //     "appium:appWaitActivity": "com.swaglabsmobileapp.MainActivity",
-        //     "appium:newCommandTimeout": 240,
-        // },
         {
             platformName: "Android",
             maxInstances: 1,
@@ -46,15 +21,11 @@ exports.config = {
             "appium:platformVersion": "10.0",
             "appium:orientation": "PORTRAIT",
             "appium:automationName": "UiAutomator2",
-            "appium:app": join(process.cwd(), "./app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"),
-            "appium:appWaitActivity": "com.swaglabsmobileapp.MainActivity",
+            "appium:app": join(process.cwd(), "app/E-Commerce App_1.8_apkcombo.com.apk"),
+            "appium:appWaitActivity": "com.studiobluelime.ecommerceapp.WelcomeActivity",
             "appium:newCommandTimeout": 240,
         },
     ],
-    //
-    // ===================
-    // Test Configurations
-    // ===================
     logLevel: "info",
     bail: 0,
     baseUrl: "http://localhost",
@@ -76,7 +47,7 @@ exports.config = {
     framework: "cucumber",
     reporters: ["spec"],
     cucumberOpts: {
-        require: ["./features/step-definitions/*.ts",],
+        require: ["./features/step_definitions/*.ts",],
         backtrace: false,
         requireModule: [],
         dryRun: false,

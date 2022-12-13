@@ -21,7 +21,6 @@ module.exports = {
                 "allowTemplateLiterals": true
             }
         ],
-        "no-trailing-spaces": "error",
         "@typescript-eslint/typedef": [
             "error",
             {
