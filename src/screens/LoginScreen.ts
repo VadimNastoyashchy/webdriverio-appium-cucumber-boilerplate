@@ -1,7 +1,7 @@
-import HeaderComponent from "../components/HeaderComponent";
+import Header from "../components/Header";
 
 class LoginScreen {
-    public header = HeaderComponent;
+    public header = Header;
 
     private get emailInputField() {
         return $("//*[@text=\"Email\"]");
@@ -11,7 +11,7 @@ class LoginScreen {
         return $("//*[@text=\"Password\"]");
     }
 
-    private get loginBtn() {
+    public get loginBtn() {
         return $("//*[@text=\"LOGIN\"]");
     }
 
@@ -21,10 +21,6 @@ class LoginScreen {
 
     public async fillPassword(password: string) {
         await (await this.passwordInputField).setValue(password);
-    }
-
-    public async clickOnLoginBtn() {
-        await (await this.loginBtn).click();
     }
 }
 
