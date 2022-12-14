@@ -5,17 +5,17 @@ import SlideMenu from "../../src/components/SlideMenu";
 import LoginScreen from "../../src/screens/LoginScreen";
 import MyAccountScreen from "../../src/screens/MyAccountScreen";
 
-Given(/^I am on the main screen step one\.$/, async () => {
-    await WelcomeScreen.nav.clickOnSkipBtn();
+Given(/^I am on the main screen\.$/, async () => {
+    await (await WelcomeScreen.nav.skipBnt).click();
     await expect(await (await MainScreen.header.title).getText()).toEqual("eCommerce App");
 });
 
 When(/^I tap on the Menu button\.$/, async () => {
-    await MainScreen.header.clickOnSlideMenuBtn();
+    await (await MainScreen.header.slideMenuBtn).click();
 });
 
 When(/^I tap on the My Account button\.$/, async () => {
-    await SlideMenu.clickOnMyAccountBtn();
+    await (await SlideMenu.myAccountBtn).click();
 });
 
 Then(/^I should be redirected to the Login screen\. Title (.*) is present\.$/, async (title) => {
@@ -25,7 +25,7 @@ Then(/^I should be redirected to the Login screen\. Title (.*) is present\.$/, a
 When(/^I fill Email (.*) and Password (.*) and click on LOGIN button\.$/, async (email, password) => {
     await LoginScreen.fillEmail(email);
     await LoginScreen.fillPassword(password);
-    await LoginScreen.clickOnLoginBtn();
+    await (await LoginScreen.loginBtn).click();
 });
 
 Then(/^I should be redirected to the My Account screen\. Title (.*) is present\.$/, async (title) => {
@@ -34,5 +34,5 @@ Then(/^I should be redirected to the My Account screen\. Title (.*) is present\.
 });
 
 When(/^I click on LOGOUT button\.$/, async () => {
-    await MyAccountScreen.clickOnLogOutBtn();
+    await (await MyAccountScreen.logOutBtn).click();
 });

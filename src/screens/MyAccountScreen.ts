@@ -1,15 +1,11 @@
-import HeaderComponent from "../components/HeaderComponent";
+import Header from "../components/Header";
 
 class MyAccountScreen {
 
-    public header = HeaderComponent;
+    public header = Header;
 
-    private get logOutBtn() {
+    public get logOutBtn() {
         return $("//*[@text=\"LOGOUT\"]");
-    }
-
-    public async clickOnLogOutBtn() {
-        await (await this.logOutBtn).click();
     }
 }
 
