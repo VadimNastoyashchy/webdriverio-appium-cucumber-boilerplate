@@ -1,4 +1,4 @@
-import {RectReturn} from "@wdio/protocols/build/types";
+import { RectReturn } from "@wdio/protocols/build/types";
 
 interface ICoordinates {
     x: number;
@@ -7,20 +7,20 @@ interface ICoordinates {
 
 const SWIPE_COORDINATES = {
     downPoint: {
-        from: {x: 50, y: 85},
-        to: {x: 50, y: 15},
+        from: { x: 50, y: 85 },
+        to: { x: 50, y: 15 },
     },
     upPoint: {
-        from: {x: 50, y: 15},
-        to: {x: 50, y: 85},
+        from: { x: 50, y: 15 },
+        to: { x: 50, y: 85 },
     },
     rightPoint: {
-        from: {x: 95, y: 50},
-        to: {x: 5, y: 50},
+        from: { x: 95, y: 50 },
+        to: { x: 5, y: 50 },
     },
     leftPoint: {
-        from: {x: 5, y: 50},
-        to: {x: 95, y: 50},
+        from: { x: 5, y: 50 },
+        to: { x: 95, y: 50 },
     },
 };
 
@@ -62,13 +62,13 @@ export default class Swipe {
             {
                 type: "pointer",
                 id: "finger1",
-                parameters: {pointerType: "touch"},
+                parameters: { pointerType: "touch" },
                 actions: [
-                    {type: "pointerMove", duration: 0, x: from.x, y: from.y},
-                    {type: "pointerDown", button: 0},
-                    {type: "pause", duration: 100},
-                    {type: "pointerMove", duration: 1000, x: to.x, y: to.y},
-                    {type: "pointerUp", button: 0},
+                    { type: "pointerMove", duration: 0, x: from.x, y: from.y },
+                    { type: "pointerDown", button: 0 },
+                    { type: "pause", duration: 100 },
+                    { type: "pointerMove", duration: 1000, x: to.x, y: to.y },
+                    { type: "pointerUp", button: 0 },
                 ],
             },
         ]);

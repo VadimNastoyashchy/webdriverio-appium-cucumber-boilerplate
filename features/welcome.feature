@@ -9,6 +9,7 @@ Feature: E-commerce app - Welcome Screen
     Then I should be redirected to the welcome screen step third. Title <title3> and subTitle <subtitle3> is present.
     When I tap on the Got It button.
     Then I should be redirected to the main screen. App header Title <headerTitle> is present.
+
     Examples:
       | title          | subtitle                                          | headerTitle   | title2       | subtitle2                       | title3 | subtitle3                          |
       | E Commerce App | The Easiest Way To Order Products From This App ! | eCommerce App | New Arrivals | Get New Products On One Touch ! | Sale   | Great Discounts On Many Products ! |

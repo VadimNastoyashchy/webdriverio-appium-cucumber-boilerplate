@@ -1,4 +1,4 @@
-import {Given, When, Then} from "@wdio/cucumber-framework";
+import { Given, When, Then } from "@wdio/cucumber-framework";
 import WelcomeScreen from "../../src/screens/WelcomeScreen";
 import MainScreen from "../../src/screens/MainScreen";
 import SlideMenu from "../../src/components/SlideMenu";
@@ -29,7 +29,7 @@ When(/^I fill Email (.*) and Password (.*) and click on LOGIN button\.$/, async 
 });
 
 Then(/^I should be redirected to the My Account screen\. Title (.*) is present\.$/, async (title) => {
-    await $("//*[@text=\"My Account\"]").waitForDisplayed({timeout: 5000});
+    await $("//*[@text=\"My Account\"]").waitForDisplayed({ timeout: 5000 });
     await expect(await (await MyAccountScreen.header.title).getText()).toEqual(title);
 });
 
