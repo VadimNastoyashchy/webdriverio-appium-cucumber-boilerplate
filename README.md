@@ -16,3 +16,20 @@ Install all the necessary dependency using npm :
 ```
 npm install
 ```
+
+Then you have to configure android emulator or real devices should be connected.
+After that change the following capabilities with your emulator/device:
+```
+capabilities: [
+        {
+            "appium:avd": "Your avd device\emulator name",
+            "appium:deviceName": "Your device\emulator name",
+            "appium:platformVersion": "device\emulator os version",
+        },
+    ],
+```
+
+To run tests use npm command:
+```
+npm run wdioAndroid
+```
