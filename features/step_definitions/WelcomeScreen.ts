@@ -8,7 +8,7 @@ Given(/^I am on the welcome screen step one\. Title (.*) and subTitle (.*) is pr
 });
 
 When(/^I tap on the Next button\.$/, async () => {
-    await WelcomeScreen.navBar.clickOnNextBtn();
+    await WelcomeScreen.nav.clickOnNextBtn();
 });
 
 Then(/^I should be redirected to the welcome screen step two\. Title (.*) and subTitle (.*) is present\.$/, async (title, subtitle) => {
@@ -22,7 +22,7 @@ Then(/^I should be redirected to the welcome screen step third\. Title (.*) and 
 });
 
 When(/^I tap on the Got It button\.$/, async () => {
-    await WelcomeScreen.navBar.clickOnGotItBtn();
+    await WelcomeScreen.nav.clickOnGotItBtn();
 });
 
 Then(/^I should be redirected to the main screen\. App header Title (.*) is present\.$/, async (title) => {

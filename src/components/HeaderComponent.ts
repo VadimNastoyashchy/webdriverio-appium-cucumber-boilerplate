@@ -1,7 +1,15 @@
 class HeaderComponent {
 
+    private get SlideMenuBtn() {
+        return $("//android.widget.ImageButton[@content-desc=\"App\"]");
+    }
+
     public get title() {
-        return $("//*[@text=\"eCommerce App\"]");
+        return $(".android.widget.TextView");
+    }
+
+    public async clickOnSlideMenuBtn() {
+        await (await this.SlideMenuBtn).click();
     }
 
 }

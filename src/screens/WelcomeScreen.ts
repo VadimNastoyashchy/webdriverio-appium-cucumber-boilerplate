@@ -1,4 +1,4 @@
-import WelcomeScreenNavBar from "../components/WelcomeScreenNavBar";
+import NavFooter from "../components/NavFooter";
 
 class StepOne {
     public get title() {
@@ -32,7 +32,7 @@ class StepThird {
 }
 
 class WelcomeScreen {
-    navBar = WelcomeScreenNavBar;
+    nav = NavFooter;
     stepOne = new StepOne();
     stepTwo = new StepTwo();
     stepThird = new StepThird();
