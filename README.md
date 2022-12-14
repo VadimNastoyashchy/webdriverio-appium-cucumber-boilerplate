@@ -18,7 +18,7 @@ npm install
 ```
 
 Then you have to configure android emulator or real devices should be connected.
-After that change the following capabilities with your emulator/device:
+After that change the following capabilities in wdio-android.conf.ts file with your emulator/device:
 ```
 capabilities: [
         {

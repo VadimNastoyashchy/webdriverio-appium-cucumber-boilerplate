@@ -1,4 +1,4 @@
-import {Given, Then, When} from "@wdio/cucumber-framework";
+import { Given, Then, When } from "@wdio/cucumber-framework";
 import WelcomeScreen from "../../src/screens/WelcomeScreen";
 import MainScreen from "../../src/screens/MainScreen";
 
